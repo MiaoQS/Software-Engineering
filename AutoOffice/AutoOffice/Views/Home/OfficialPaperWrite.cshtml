@@ -1,0 +1,17 @@
+﻿
+@{
+    ViewData["Title"] = "OfficialPaperWrite";
+}
+<link href="~/css/officialPaper.css" rel="stylesheet" />
+
+<h2>Document Write to @ViewData["ToEmail"]</h2>
+<hr />
+
+<form asp-action="OfficialPaperSend" method="post">
+    <label for="title">Title</label>
+    <input id="title" class="form-control" name="title" maxlength="50" />
+    <label for="official-paper-content">Content</label>
+    <textarea id="official-paper-content" cols="2"   rows="6" class="form-control" name="content" ></textarea>
+    <input name="toEmail" value="@ViewData["ToEmail"]" hidden />
+    <button type="submit" class="btn btn-success">Send</button>
+</form>

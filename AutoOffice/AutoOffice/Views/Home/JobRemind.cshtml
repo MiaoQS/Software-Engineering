@@ -1,0 +1,43 @@
+﻿@model AutoOffice.Models.HomeViewModels.JobRemindModel
+
+@{
+    ViewData["Title"] = "Tasks";
+}
+<link href="~/css/jobRemind.css" rel="stylesheet" />
+
+<h2>@ViewData["Title"]</h2>
+<hr />
+
+<div id="job-remind">
+
+    <div id="job-remind-input">
+        <form asp-action="JobRemindAdd" method="post">
+            <input name="content" class="form-control" placeholder="specify task..." />
+            <button type="submit" class="btn btn-primary">Add</button>
+        </form>
+    </div>
+
+    <hr />
+    <h4>Unfinished</h4>
+    @foreach (var jobRemind in Model.JobReminds) {
+        if (jobRemind.Finished == false) {
+            <div id="job-content">
+                @jobRemind.Content
+                <form asp-action="JobRemindFinish" method="post">
+                    <input name="id" value="@jobRemind.ID" hidden />
+                    <button type="submit" class="btn btn-success">Mark as Finished</button>
+                </form>
+            </div>
+        }
+    }
+
+    <h4>Finished</h4>
+    @foreach (var jobRemind in Model.JobReminds) {
+        if (jobRemind.Finished) {
+            <div id="finished-job">
+                <p id="job-content">@jobRemind.Content</p>
+            </div>
+        }
+    }
+
+</div>

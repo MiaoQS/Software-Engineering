@@ -1,0 +1,15 @@
+﻿
+@{
+    ViewData["Title"] = "MessageSend";
+}
+
+<h2>MessageSend</h2>
+
+<form asp-action="MessageDetail" method="post">
+    <input name="toEmail" value="@ViewData["toEmail"].ToString()" hidden />
+    <button id="jump" type="submit" hidden></button>
+</form>
+
+<script>
+    document.getElementById('jump').click();
+</script>

@@ -1,0 +1,50 @@
+﻿@using AutoOffice.Models.HomeViewModels;
+@model AutoOffice.Models.HomeViewModels.OfficialPaperModel
+@{
+    ViewData["Title"] = "Document Manage";
+}
+<link href="~/css/officialPaper.css" rel="stylesheet" />
+
+<h2>@ViewData["Title"]</h2>
+
+<hr />
+
+<h4>Received</h4>
+
+@foreach (var officialPaper in Model.OfficialPapers) {
+    if (officialPaper.ToEmail == ViewData["UserName"].ToString()) {
+<div id="official-paper">
+    <p id="title">@officialPaper.Title</p>
+    <p id="content">@officialPaper.Content</p>
+    <p id="email">From：@officialPaper.FromEmail</p>
+    <p id="time">@officialPaper.Time</p>
+    <p id="approvement">State：@officialPaper.displayApprovement()</p>
+
+    @if (officialPaper.Approvement == (int)ApprovementState.NotDecideYet) {
+        <form asp-action="OfficialPaperApprove" method="post">
+            <input name="id" value="@officialPaper.ID" hidden />
+            <button type="submit" class="btn btn-success">Agree</button>
+        </form>
+        <form asp-action="OfficialPaperNotApprove" method="post">
+            <input name="id" value="@officialPaper.ID" hidden />
+            <button type="submit" class="btn btn-danger">Disagree</button>
+        </form>
+    }
+
+</div>
+    }
+}
+<hr/>
+<h4>Send</h4>
+
+@foreach (var officialPaper in Model.OfficialPapers) {
+    if (officialPaper.FromEmail == ViewData["UserName"].ToString()) {
+<div id="official-paper">
+    <p id="title">@officialPaper.Title</p>
+    <p id="content">@officialPaper.Content</p>
+    <p id="email">To：@officialPaper.ToEmail</p>
+    <p id="time">@officialPaper.Time</p>
+    <p id="approvement">State：@officialPaper.displayApprovement()</p>
+</div>
+    }
+}

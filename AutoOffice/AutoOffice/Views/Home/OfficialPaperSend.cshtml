@@ -1,0 +1,16 @@
+﻿
+@{
+    ViewData["Title"] = "OfficialPaperSend";
+}
+
+<h2>完成!</h2>
+
+<p>跳转中。。。</p>
+
+<form asp-action="OfficialPaper">
+    <button id="jump" type="submit" hidden></button>
+</form>
+
+<script>
+    window.setTimeout("document.getElementById('jump').click()", 2000);
+</script>

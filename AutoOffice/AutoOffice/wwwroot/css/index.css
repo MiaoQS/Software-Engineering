@@ -1,0 +1,11 @@
+﻿
+#nav-button button {
+    transition-duration: 1s;
+    margin-left: 3em;
+    margin-top: 3em;
+}
+
+#nav-button button:hover {
+    transition-duration: 0.5s;
+    transform: scale(1.4);
+}

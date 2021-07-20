@@ -1,0 +1,47 @@
+﻿@model AutoOffice.Models.HomeViewModels.HumanResourceManageModel
+@{
+    ViewData["Title"] = "Message";
+}
+<link href="~/css/message.css" rel="stylesheet" />
+<h2>Message</h2>
+<hr />
+
+<table>
+    <tr>
+        <th>
+            Email
+        </th>
+        <th>
+            Name
+        </th>
+        <th>
+            Department
+        </th>
+        <th>
+            Job
+        </th>
+    </tr>
+    @foreach (var item in Model.HumanManages)
+    {
+        <tr id="message-user-row">
+            <td>
+                @item.Email
+            </td>
+            <td>
+                @item.Name
+            </td>
+            <td>
+                @item.Department
+            </td>
+            <td>
+                @item.Job
+            </td>
+            <td>
+                <form id="form" asp-action="MessageDetail" method="post">
+                    <input name="toEmail" value="@item.Email" hidden />
+                    <button type="submit" class="btn btn-primary">Start Message</button>
+                </form>
+            </td>
+        </tr>
+    }
+</table>

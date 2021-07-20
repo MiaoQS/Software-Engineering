@@ -1,0 +1,38 @@
+﻿@model AutoOffice.Models.HomeViewModels.MessageModel
+@{
+    ViewData["Title"] = "Message with " + ViewData["toEmail"];
+}
+<link href="~/css/message.css" rel="stylesheet" />
+<h2>@ViewData["Title"]</h2>
+<hr />
+
+<div id="message-detail">
+    @foreach (var message in Model.Messages)
+    {
+        if (message.ToEmail == ViewData["UserName"].ToString())
+        {
+            <div id="from-message">
+                <p id="from-time">@message.Time</p>
+                <p id="from-text">@message.Text</p>
+            </div>
+        }
+        else
+        {
+            <div id="to-message">
+                <p id="to-time">@message.Time</p>
+                <p id="to-text">@message.Text</p>
+            </div>
+        }
+        <br />
+    }
+
+    <div id="message-input">
+        <form asp-action="MessageSend" method="post">
+            <input name="toEmail" value="@ViewData["toEmail"].ToString()" hidden />
+            <div class="form-group">
+                <input name="text" class="form-control" placeholder="Edit text to send..." />
+            </div>
+            <button type="submit" class="btn btn-success">Send</button>
+        </form>
+    </div>
+</div>

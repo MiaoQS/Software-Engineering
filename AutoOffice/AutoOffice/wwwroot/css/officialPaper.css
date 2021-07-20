@@ -1,0 +1,23 @@
+﻿#title {
+    max-width: 20em;
+}
+
+#official-paper {
+    background-color: burlywood;
+    padding: 3em;
+    border-radius: 3em;
+    margin-bottom: 3em;
+}
+
+#time{
+    color: darkgrey;
+}
+#approvement{
+    color: aliceblue;
+}
+#title {
+    font-size: 2em;
+}
+#content {
+    font-size: 1.5em;
+}

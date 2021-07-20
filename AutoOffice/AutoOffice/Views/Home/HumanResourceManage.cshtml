@@ -1,0 +1,53 @@
+﻿@model AutoOffice.Models.HomeViewModels.HumanResourceManageModel
+@{
+    ViewData["Title"] = "Human Resource Manage";
+}
+<link href="~/css/humanResource.css" rel="stylesheet" />
+
+<h2>@ViewData["Title"]</h2>
+<hr />
+
+
+<div>
+    <table>
+        <tr>
+            <th>
+                Email
+            </th>
+            <th>
+                Name
+            </th>
+            <th>
+                Department
+            </th>
+            <th>
+                Job
+            </th>
+        </tr>
+        @foreach (var item in Model.HumanManages) {
+            if (item.Email == "root@root.com") {
+                continue;
+            }
+            <tr>
+                <form id="form" asp-action="HumanResourceManageSet" method="post">
+                    <td>
+                        <label for="form">@item.Email</label>
+                    </td>
+                    <input name="email" value="@item.Email" hidden />
+                    <td>
+                        <input id="name" class="form-control" name="name" value="@item.Name" />
+                    </td>
+                    <td>
+                        <input id="department" class="form-control" name="department" value="@item.Department" />
+                    </td>
+                    <td>
+                        <input id="job" class="form-control" name="job" value="@item.Job" />
+                    </td>
+                    <td>
+                        <button type="submit" class="btn btn-warning">Update</button>
+                    </td>
+                </form>
+            </tr>
+        }
+    </table>
+</div>

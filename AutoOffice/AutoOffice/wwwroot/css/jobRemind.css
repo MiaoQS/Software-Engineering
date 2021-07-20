@@ -1,0 +1,16 @@
+﻿#job-remind-input button {
+    margin-top: 0.5em;
+    width: 10em;
+}
+
+#job-content {
+    border-radius: 0.5em;
+    padding: 1em;
+    margin-top: 1em;
+    background-color: lightgoldenrodyellow;
+}
+
+#job-content button {
+    margin-top: 0.5em;
+    width: 10em;
+}

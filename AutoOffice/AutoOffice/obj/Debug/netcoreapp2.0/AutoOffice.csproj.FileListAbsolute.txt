@@ -1,0 +1,16 @@
+C:\Users\86188\Desktop\AutoOffice\AutoOffice\bin\Debug\netcoreapp2.0\appsettings.Development.json
+C:\Users\86188\Desktop\AutoOffice\AutoOffice\bin\Debug\netcoreapp2.0\appsettings.json
+C:\Users\86188\Desktop\AutoOffice\AutoOffice\bin\Debug\netcoreapp2.0\bundleconfig.json
+C:\Users\86188\Desktop\AutoOffice\AutoOffice\bin\Debug\netcoreapp2.0\AutoOffice.deps.json
+C:\Users\86188\Desktop\AutoOffice\AutoOffice\bin\Debug\netcoreapp2.0\AutoOffice.runtimeconfig.json
+C:\Users\86188\Desktop\AutoOffice\AutoOffice\bin\Debug\netcoreapp2.0\AutoOffice.runtimeconfig.dev.json
+C:\Users\86188\Desktop\AutoOffice\AutoOffice\bin\Debug\netcoreapp2.0\AutoOffice.dll
+C:\Users\86188\Desktop\AutoOffice\AutoOffice\bin\Debug\netcoreapp2.0\AutoOffice.pdb
+C:\Users\86188\Desktop\AutoOffice\AutoOffice\obj\Debug\netcoreapp2.0\AutoOffice.csprojAssemblyReference.cache
+C:\Users\86188\Desktop\AutoOffice\AutoOffice\obj\Debug\netcoreapp2.0\AutoOffice.AssemblyInfoInputs.cache
+C:\Users\86188\Desktop\AutoOffice\AutoOffice\obj\Debug\netcoreapp2.0\AutoOffice.AssemblyInfo.cs
+C:\Users\86188\Desktop\AutoOffice\AutoOffice\obj\Debug\netcoreapp2.0\AutoOffice.csproj.CoreCompileInputs.cache
+C:\Users\86188\Desktop\AutoOffice\AutoOffice\obj\Debug\netcoreapp2.0\UserSecretsAssemblyInfo.cs
+C:\Users\86188\Desktop\AutoOffice\AutoOffice\obj\Debug\netcoreapp2.0\AutoOffice.dll
+C:\Users\86188\Desktop\AutoOffice\AutoOffice\obj\Debug\netcoreapp2.0\AutoOffice.pdb
+C:\Users\86188\Desktop\AutoOffice\AutoOffice\obj\Debug\netcoreapp2.0\AutoOffice.genruntimeconfig.cache
